@@ -1,0 +1,23 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./deploy/Dockerfile.server
+    volumes:
+      - ./src/server:/opt/src
+    container_name: express-app
+    ports:
+      - 8080:8080
+
+  vue:
+    build:
+      context: .
+      dockerfile: ./deploy/Dockerfile.client
+    volumes:
+      - ./src/client/src:/opt/src
+    container_name: vue-app
+    ports:
+      - 3000:3000
+    links:
+      - "web"

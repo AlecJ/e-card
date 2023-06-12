@@ -1,0 +1,16 @@
+From node:20
+
+# create app directory
+WORKDIR /opt
+
+# install node modules
+COPY src/server/package*.json ./
+RUN npm i
+# If you are building your code for production
+# RUN npm ci --omit=dev
+
+# copy source
+COPY src/server ./src
+
+EXPOSE 8080
+CMD [ "npm", "run", "start" ]
