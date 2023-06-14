@@ -1,6 +1,12 @@
 <template>
-    <div class="row">
+    <div id="selectedCard">
         <gameCard card-type="emperor" />
+    </div>
+    <div class="row">
+        <gameCard />
+        <gameCard />
+        <gameCard />
+        <gameCard />
         <gameCard card-type="slave" />
     </div>
 </template>

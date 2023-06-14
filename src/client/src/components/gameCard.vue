@@ -11,9 +11,7 @@
                 <img src="../assets/citizen.png" alt="Avatar" style="width:300px;height:400px;">
             </div>
             <div class="flip-card-back">
-                <h1>John Doe</h1>
-                <p>Architect & Engineer</p>
-                <p>We love that guy</p>
+                <img src="../assets/citizen.png" alt="Avatar" style="width:300px;height:400px;">
             </div>
         </div>
     </div> 
@@ -48,7 +46,6 @@
   background-color: transparent;
   width: 300px;
   height: 400px;
-  border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -64,7 +61,7 @@
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card-inner.revealed {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 
 /* Position the front and back side */
